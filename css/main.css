@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    background-image: url(../images/list.jpg);
+    background-size: auto;
+    /* these properties are inherited by children elements */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #main-header {
+    background: rgba(6, 10, 216, 0.856);
+    opacity: 60%;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.749);
+}
+
+  header > h1 > p {
+    text-align: center;
+    padding: 8px;
+  }
+
+ input {
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+ }
+
+ input {
+  opacity: 0.8;
+ }
+
+  article {
+    background-image: url(../images/list2.jpg);
+    background-size: cover;
+    width: 380px;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    margin: 10px;
+    color: black;
+  }
+  article > h2 {
+    color: rgb(203, 195, 39);
+    padding: 4px 10px;
+  }
+  article:first-of-type {
+    border: 4px solid rgb(216, 230, 23);
+  }
+  
+  #inprogress {
+    border: 4px solid red;
+  }
+  
+  #inprogress h2 {
+    color: red;
+  }
+  
+  #done {
+    border: 4px solid rgb(6, 240, 224);
+  }
+  
+  #done h2 {
+    color: aqua;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 10px;
+  }
+  
+  .todo li:nth-child(odd) {
+    background-color: rgba(222, 219, 18, 0.781);
+  }
+  .inprogress li:nth-child(odd) {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  .done li:nth-child(odd) {
+    background-color: rgba(12, 214, 214, 0.863);
+  }
+  
+  .task-check {
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.task-check:checked ~ .task-text::after {
+    content: '\2713';
+    color: #00ff26;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
